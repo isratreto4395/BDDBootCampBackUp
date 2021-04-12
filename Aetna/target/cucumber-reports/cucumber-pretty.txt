@@ -1,0 +1,115 @@
+
+@Israt
+Scenario: Verifying the VaccineFAQs Information page                                                                                         # src/test/java/features/CovidProviderFAQ.feature:9
+  Given I am on the Aetna providers Homepage                                                                                                 # stepDefinitions.ProvidersStepDefinition.i_am_on_the_aetna_homepage()
+  And I close the Partnering with providers alert                                                                                            # stepDefinitions.ProvidersStepDefinition.i_close_the_Partnering_with_providers_alert()
+  Then i click on the COVID FAQs on the Providers page                                                                                       # stepDefinitions.CovidProviderFAQStepDefinitions.i_click_on_the_covid_fa_qs_on_the_providers_page()
+  Then I click on the VaccineFAQs button                                                                                                     # stepDefinitions.CovidProviderFAQStepDefinitions.i_click_on_the_vaccine_fa_qs_button()
+  When I click on Which COVID vaccinations will Aetna cover? tab                                                                             # stepDefinitions.CovidProviderFAQStepDefinitions.i_click_on_which_covid_vaccinations_will_aetna_cover_tab()
+  Then I verify the first sentence "Aetna will cover any COVID-19 vaccine that has received FDA authorization, at no added cost to members." # stepDefinitions.CovidProviderFAQStepDefinitions.i_verify_the_first_sentence(java.lang.String)
+
+@Israt
+Scenario: Verify the functionality of the Availity signIn page with invalid user Information                           # src/test/java/features/CovidProviderFAQ.feature:15
+  Given I am on the Aetna providers Homepage                                                                           # stepDefinitions.ProvidersStepDefinition.i_am_on_the_aetna_homepage()
+  And I close the Partnering with providers alert                                                                      # stepDefinitions.ProvidersStepDefinition.i_close_the_Partnering_with_providers_alert()
+  Then i click on the COVID FAQs on the Providers page                                                                 # stepDefinitions.CovidProviderFAQStepDefinitions.i_click_on_the_covid_fa_qs_on_the_providers_page()
+  Then I click on the VaccineFAQs button                                                                               # stepDefinitions.CovidProviderFAQStepDefinitions.i_click_on_the_vaccine_fa_qs_button()
+  And I click on the Availity link on the Vaccine Updates pop-up                                                       # stepDefinitions.CovidProviderFAQStepDefinitions.i_click_on_the_availity_link_on_the_vaccine_updates_pop_up()
+  Then I click the continue button to open the Availity page on another window and I close the old window              # stepDefinitions.CovidProviderFAQStepDefinitions.i_click_the_continue_button_to_open_the_availity_page_on_another_window_and_i_close_the_old_window()
+  When I enter invalid UserID and Password                                                                             # stepDefinitions.CovidProviderFAQStepDefinitions.i_enter_invalid_user_id_and_password(java.util.List<java.util.List<java.lang.String>>)
+  Then I click on the showPassword checkbox                                                                            # stepDefinitions.CovidProviderFAQStepDefinitions.i_click_on_the_show_password_checkbox()
+  Then I click on the LogIn button                                                                                     # stepDefinitions.CovidProviderFAQStepDefinitions.i_click_on_the_log_in_button()
+  Then I verify the error message "Problem accessing /availity/web/public.elegant.login/public.elegant.login. Reason:" # stepDefinitions.CovidProviderFAQStepDefinitions.i_verify_the_error_message(java.lang.String)
+
+@Israt
+Scenario: Verify the Forgot Password Functionality of the CAQH solution signIn page with invalid UserName # src/test/java/features/CovidProviderFAQ.feature:27
+  Given I am on the Aetna providers Homepage                                                              # stepDefinitions.ProvidersStepDefinition.i_am_on_the_aetna_homepage()
+  And I close the Partnering with providers alert                                                         # stepDefinitions.ProvidersStepDefinition.i_close_the_Partnering_with_providers_alert()
+  Then i click on the COVID FAQs on the Providers page                                                    # stepDefinitions.CovidProviderFAQStepDefinitions.i_click_on_the_covid_fa_qs_on_the_providers_page()
+  Then I click on the VaccineFAQs button                                                                  # stepDefinitions.CovidProviderFAQStepDefinitions.i_click_on_the_vaccine_fa_qs_button()
+  And I click on the CAQH link on the Vaccine Updates pop-up                                              # stepDefinitions.CovidProviderFAQStepDefinitions.i_click_on_the_caqh_link_on_the_vaccine_updates_pop_up()
+  Then I click the continue button to open the CAQH page on another window and I close the old window     # stepDefinitions.CovidProviderFAQStepDefinitions.i_click_the_continue_button_to_open_the_caqh_page_on_another_window_and_i_close_the_old_window()
+  And I enter invalid UserName                                                                            # stepDefinitions.CovidProviderFAQStepDefinitions.i_enter_invalid_user_name(io.cucumber.datatable.DataTable)
+  When I click on Forgot Password                                                                         # stepDefinitions.CovidProviderFAQStepDefinitions.i_click_on_forgot_password()
+  Then I enter invalid UserName                                                                           # stepDefinitions.CovidProviderFAQStepDefinitions.i_enter_invalid_user_name(io.cucumber.datatable.DataTable)
+  And I click on the TermsOfService checkbox                                                              # stepDefinitions.CovidProviderFAQStepDefinitions.i_click_on_the_terms_of_service_checkbox()
+  When I hit continue                                                                                     # stepDefinitions.CovidProviderFAQStepDefinitions.i_hit_continue()
+  Then I verify the page title "CAQH ProView - Self Service Forgot Password"                              # stepDefinitions.CovidProviderFAQStepDefinitions.i_verify_the_page_title(java.lang.String)
+
+@Israt
+Scenario: Verify the BillingAndCodingFAQs Information page                                                          # src/test/java/features/CovidProviderFAQ.feature:41
+  Given I am on the Aetna providers Homepage                                                                        # stepDefinitions.ProvidersStepDefinition.i_am_on_the_aetna_homepage()
+  And I close the Partnering with providers alert                                                                   # stepDefinitions.ProvidersStepDefinition.i_close_the_Partnering_with_providers_alert()
+  Then i click on the COVID FAQs on the Providers page                                                              # stepDefinitions.CovidProviderFAQStepDefinitions.i_click_on_the_covid_fa_qs_on_the_providers_page()
+  Then I click on the BillingAndCodingFAQs button                                                                   # stepDefinitions.CovidProviderFAQStepDefinitions.i_click_on_the_billing_and_coding_fa_qs_button()
+  When I click on Where can providers access the telemedicine policy and related codes? tab                         # stepDefinitions.CovidProviderFAQStepDefinitions.i_click_on_where_can_providers_access_the_telemedicine_policy_and_related_codes_tab()
+  Then I verify the answer "Aetna’s telemedicine policy is available to providers on the Availity provider portal." # stepDefinitions.CovidProviderFAQStepDefinitions.i_verify_the_answer(java.lang.String)
+
+@Israt
+Scenario: Verify the ViewUpToDateVaccineDataFromTheCDC Information page                                   # src/test/java/features/CovidProviderFAQ.feature:47
+  Given I am on the Aetna providers Homepage                                                              # stepDefinitions.ProvidersStepDefinition.i_am_on_the_aetna_homepage()
+      org.openqa.selenium.TimeoutException: timeout: Timed out receiving message from renderer: 21.875
+  (Session info: chrome=89.0.4389.90)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-TILJLKS', ip: '192.168.1.11', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 89.0.4389.90, chrome: {chromedriverVersion: 89.0.4389.23 (61b08ee2c5002..., userDataDir: C:\Users\israt\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:61797}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 1dc5baa691ba6304a2fe434a732ad747
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)
+	at common.WebAPI.setUp(WebAPI.java:320)
+	at common.WebAPI.openBrowser(WebAPI.java:300)
+	at stepDefinitions.ProvidersStepDefinition.i_am_on_the_aetna_homepage(ProvidersStepDefinition.java:41)
+	at ✽.I am on the Aetna providers Homepage(file:///C:/Users/israt/IdeaProjects/BDDAutomationFramework_Team2/Aetna/src/test/java/features/CovidProviderFAQ.feature:4)
+
+      org.openqa.selenium.TimeoutException: timeout: Timed out receiving message from renderer: 10.000
+  (Session info: chrome=89.0.4389.90)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-TILJLKS', ip: '192.168.1.11', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 89.0.4389.90, chrome: {chromedriverVersion: 89.0.4389.23 (61b08ee2c5002..., userDataDir: C:\Users\israt\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:61797}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 1dc5baa691ba6304a2fe434a732ad747
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:295)
+	at stepDefinitions.ResourcesForYouPageStepDefinition.tearDown(ResourcesForYouPageStepDefinition.java:19)
+
+      org.openqa.selenium.TimeoutException: timeout: Timed out receiving message from renderer: 10.000
+  (Session info: chrome=89.0.4389.90)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-TILJLKS', ip: '192.168.1.11', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 89.0.4389.90, chrome: {chromedriverVersion: 89.0.4389.23 (61b08ee2c5002..., userDataDir: C:\Users\israt\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:61797}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 1dc5baa691ba6304a2fe434a732ad747
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:295)
+	at stepDefinitions.ProvidersStepDefinition.tearDown(ProvidersStepDefinition.java:24)
+
